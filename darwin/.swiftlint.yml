@@ -1,0 +1,4 @@
+included: 
+  - Classes
+ 
+force_cast: warning
