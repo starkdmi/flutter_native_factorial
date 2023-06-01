@@ -1,6 +1,6 @@
-# factorial_test
+# factorial_example
 
-The Factorial Plugin integration tests.
+Demonstrates how to use the factorial plugin.
 
 ## Getting Started
 
