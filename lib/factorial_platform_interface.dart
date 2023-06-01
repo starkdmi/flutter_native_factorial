@@ -1,6 +1,7 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'factorial_method_channel.dart';
+import 'factorial_state.dart';
 
 abstract class FactorialPlatform extends PlatformInterface {
   /// Constructs a FactorialPlatform.
@@ -25,5 +26,13 @@ abstract class FactorialPlatform extends PlatformInterface {
 
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Stream<FactorialState> calculate({ required String id, required int number }) {
+    throw UnimplementedError('calculate() has not been implemented.');
+  }
+
+  Future<bool> cancel({ required String id }) async {
+    throw UnimplementedError('cancel() has not been implemented.');
   }
 }
