@@ -15,7 +15,7 @@ public class FactorialPlugin: NSObject, FlutterPlugin {
         #endif
 
         let channel = FlutterMethodChannel(
-            name: "factorial",
+            name: "com.starkdev.factorial",
             binaryMessenger: Self.messenger!
         )
         let instance = FactorialPlugin()

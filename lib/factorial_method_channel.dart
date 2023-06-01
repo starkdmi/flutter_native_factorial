@@ -7,11 +7,10 @@ import 'factorial_platform_interface.dart';
 class MethodChannelFactorial extends FactorialPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('factorial');
+  final methodChannel = const MethodChannel('com.starkdev.factorial');
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+    return await methodChannel.invokeMethod<String>('getPlatformVersion');
   }
 }
