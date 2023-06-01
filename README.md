@@ -1,6 +1,6 @@
-# factorial
+# flutter_native_factorial
 
-A new Flutter plugin project.
+The Factorial calculation using native platform code.
 
 ## Getting Started
 
