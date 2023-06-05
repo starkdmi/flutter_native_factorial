@@ -40,6 +40,9 @@ flutter:
       macos:
         pluginClass: FactorialPlugin
         sharedDarwinSource: true
+      android:
+        pluginClass: FactorialPlugin
+        package: com.starkdev.factorial
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
