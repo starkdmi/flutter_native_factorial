@@ -27,10 +27,15 @@ void main() {
     final plugin = Factorial(); // Factorial() is a singletone, always same intance is returned
 
     test('single execution', () async {
+      /*await for (final state in plugin.calculate(id: '10001', number: 10)) {
+        print(state);
+      }
+      expect(true, equals(true));*/
+
       expect(plugin.calculate(id: '10001', number: 10), emitsThrough(
         FactorialCompletedState(id: '10001', number: BigInt.from(3628800)) // 10!
       ));
-    });
+    }, timeout: const Timeout(Duration(seconds: 5)));
 
     test('queued execution', () async {
       expect(plugin.calculate(id: '10002', number: 5), emitsThrough(
